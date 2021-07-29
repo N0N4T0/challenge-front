@@ -6,11 +6,13 @@ export default createGlobalStyle`
         --white-50: #F9F9F9;
         --white-100: #F0F0F0;
 
+        --gray: #8D8D8D;
         --gray-400: #9B9B9B;
         
         --green-200: #3CC946;
         
         --black: #000000;
+        --black-800: #303030;
     }
 
     *{
@@ -22,11 +24,11 @@ export default createGlobalStyle`
 
     body{
         background-color: var(---white);
-        color: var(--gray-400);
+        color: var(--black-800);
     }
 
     body, input, button {
-        font: 400 1rem 'Montserrat', sans-serif;
+        font: 500 1rem 'Montserrat', sans-serif;
     }
 
     button{
