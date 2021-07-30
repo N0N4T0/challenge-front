@@ -6,12 +6,13 @@ export const HeaderContainer = styled.header`
 
     height: 5rem;
     box-shadow: 0 1.3em 0.5em -1em #E4E4E4;
+
+    position: relative;
 `;
 
 export const HeaderContent = styled.div`
     max-width: 1420px;
     height: 5rem;
-    /* margin: 0 auto; */
     padding: 0 2.5rem;
 
     display: flex;
@@ -38,7 +39,6 @@ export const HeaderContent = styled.div`
 
     nav + nav {
         display: inline-block;
-        /* margin-left: 11.1rem; */
         margin-left: 9.6rem;
         
         a {
@@ -49,6 +49,7 @@ export const HeaderContent = styled.div`
             height: 5rem;
             line-height: 5rem;
             font-size: 2rem;
+
         }
     }
 `;

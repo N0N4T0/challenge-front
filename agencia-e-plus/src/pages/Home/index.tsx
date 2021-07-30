@@ -1,3 +1,4 @@
+import Cart from "../../components/Cart"
 import { HeaderContainer, HeaderContent } from "./styles"
 
 const Home = ():JSX.Element => {
@@ -27,7 +28,6 @@ const Home = ():JSX.Element => {
                         <a>
                             <span className="material-icons">shopping_cart</span>
                         </a>
-
                     </nav>
                 </HeaderContent>
             </HeaderContainer>
