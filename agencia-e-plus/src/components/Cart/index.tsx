@@ -1,68 +1,41 @@
+import { useState } from "react"
 import { useEffect } from "react"
+import { api } from "../../services/api"
 import { CartContainer, CartContent, CartOrder } from "./styles"
 
+interface Products {
+    id: number;
+    name: string;
+    image: string;
+    quantity: number;
+    bestPriceFormated: string;
+}
 
 const Cart = (): JSX.Element => {
+    const [products, setProducts] = useState<Products[]>([])
+
     useEffect(() => {
-        fetch('http:localhost:3000/api/products')
-            .then(response => response.json())
-            .then(data => console.log(data))
+        api.get('/products')
+            .then(response =>setProducts(response.data.products))
     }, [])
 
     return(
         <>
             <CartContainer>
-                <CartContent>
+                {products.map(product =>(
+                    <CartContent key={product.id}>
                     <img 
-                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-                        alt="Computador" />
+                        src={product.image}
+                        alt={product.name} />
                     <div>
-                        <h4>Notebook Samsung Intel Core</h4>
+                        <h4>{product.name}</h4>
                         <div>
-                            <p>Qtd: 1</p>
-                            <p>R$ 6240,00</p>
+                            <p>Qtd: {product.quantity}</p>
+                            <p>{product.bestPriceFormated}</p>
                         </div>
                     </div>
                 </CartContent>
-
-                <CartContent>
-                    <img 
-                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-                        alt="Computador" />
-                    <div>
-                        <h4>Notebook Samsung Intel Core</h4>
-                        <div>
-                            <p>Qtd: 1</p>
-                            <p>R$ 6240,00</p>
-                        </div>
-                    </div>
-                </CartContent>
-
-                <CartContent>
-                    <img 
-                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-                        alt="Computador" />
-                    <div>
-                        <h4>Notebook Samsung Intel Core</h4>
-                        <div>
-                            <p>Qtd: 1</p>
-                            <p>R$ 6240,00</p>
-                        </div>
-                    </div>
-                </CartContent>
-
-                <CartContent>
-                    <img 
-                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-                        alt="Computador" />
-                    <div>
-                        <h4>Notebook Samsung Intel Core</h4>
-                        <div>
-                            <p>Qtd: 1</p>
-                            <p>R$ 6240,00</p>
-                        </div>
-                    </div>
-                </CartContent>
+                ))}
 
             </CartContainer>
 
