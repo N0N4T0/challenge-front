@@ -10,21 +10,21 @@ const Home = ():JSX.Element => {
                         alt="agencia eplus"
                     />
                     <nav>
-                        <a>Lorem ipsum</a>
-                        <a>Lorem ipsum</a>
-                        <a>Lorem ipsum</a>
-                        <a>Lorem ipsum</a>
-                        <a>Lorem ipsum</a>                        
+                        <a href="/">Lorem ipsum</a>
+                        <a href="/">Lorem ipsum</a>
+                        <a href="/">Lorem ipsum</a>
+                        <a href="/">Lorem ipsum</a>
+                        <a href="/">Lorem ipsum</a>               
                     </nav>
 
                     <nav>
-                        <a>
+                        <a href="/">
                             <span className="material-icons">search</span>
                         </a>
-                        <a>
+                        <a href="/">
                             <span className="material-icons">person</span>
                         </a>
-                        <a>
+                        <a href="/">
                             <span className="material-icons">shopping_cart</span>
                         </a>
                     </nav>

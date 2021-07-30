@@ -9,7 +9,7 @@ export const CartContainer = styled.div`
     background-color: var(--white-100);
 
     position: absolute;
-    right: 8rem;
+    right: 6rem;
 
     overflow-y: auto;
     height: 23.43rem;  
@@ -17,12 +17,16 @@ export const CartContainer = styled.div`
 
 export const CartContent = styled.div`
     display: flex;
-    height: 126px;
+    height: auto;
     max-width: 350px;
     padding: 30px 35px 0 20px ;
     align-items: center;
 
     border-bottom: 3px solid #E8E8E8;
+
+    &:last-child{
+        margin-bottom: 2.5rem;
+    }
 
     img {
         width: 110px;
@@ -35,7 +39,7 @@ export const CartContent = styled.div`
 
         h4 {
             font-weight: 400;
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             text-align: left;
         }
 
@@ -65,7 +69,7 @@ export const CartOrder = styled.div`
 
     position: absolute;
     bottom: 11rem;
-    right: 8rem;
+    right: 6rem;
 
     h3 {
         background-color: #E6E6E6;

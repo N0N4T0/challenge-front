@@ -5,6 +5,7 @@ export default createGlobalStyle`
         --white: #FFFFFF;
         --white-50: #F9F9F9;
         --white-100: #F0F0F0;
+        --white-200: #DDDDDD;
 
         --gray: #8D8D8D;
         --gray-100: #E8E8E8;
@@ -17,6 +18,16 @@ export default createGlobalStyle`
         --black-800: #303030;
     }
 
+    ::-webkit-scrollbar-track {
+        background-color: var(--white-200);
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--gray);
+    }
+  
     *{
         margin: 0;
         padding: 0;

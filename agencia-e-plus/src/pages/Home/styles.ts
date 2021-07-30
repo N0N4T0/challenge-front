@@ -8,6 +8,20 @@ export const HeaderContainer = styled.header`
     box-shadow: 0 1.3em 0.5em -1em #E4E4E4;
 
     position: relative;
+
+    &::after{
+        content: '';
+        
+        width: 0; 
+        height: 0; 
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-bottom: 18px solid var(--white-100);
+        
+        position: absolute;
+        bottom: 0px;
+        right: 68px;
+    }
 `;
 
 export const HeaderContent = styled.div`
@@ -30,7 +44,7 @@ export const HeaderContent = styled.div`
         a {
             display: inline-block;
             position: relative;
-            padding: 0 0.8rem;
+            margin: 0 1rem;
             height: 5rem;
             line-height: 5rem;
             font-size: 0.9rem; 
@@ -39,10 +53,10 @@ export const HeaderContent = styled.div`
 
     nav + nav {
         display: inline-block;
-        margin-left: 9.6rem;
+        margin-left: 7.6rem;
         
         a {
-            padding: 0 1.5rem;
+            margin: 0 1.5rem;
         }
 
         span {

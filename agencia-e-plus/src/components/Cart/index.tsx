@@ -17,8 +17,8 @@ const Cart = (): JSX.Element => {
     useEffect(() => {
         api.get('/products')
             .then(response =>setProducts(response.data.products))
-    }, [])
-
+    }, [])  
+    
     return(
         <>
             <CartContainer>
@@ -40,7 +40,7 @@ const Cart = (): JSX.Element => {
             </CartContainer>
 
             <CartOrder>
-                <h3>Total do pedido: <strong>R$ 20.356,95</strong></h3>
+                <h3>Total do pedido: <strong>R$ soma</strong></h3>
                 <button type="button">FINALIZAR COMPRA</button>
             </CartOrder>
         </>
