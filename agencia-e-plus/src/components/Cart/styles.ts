@@ -19,9 +19,13 @@ export const CartContent = styled.div`
     display: flex;
     height: auto;
     max-width: 350px;
-    padding: 30px 35px 0 20px ;
+    margin: 30px 15px 0 10px ;
     align-items: center;
 
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+  
     border-bottom: 3px solid #E8E8E8;
 
     &:last-child{
@@ -41,6 +45,8 @@ export const CartContent = styled.div`
             font-weight: 400;
             font-size: 0.7rem;
             text-align: left;
+
+            padding-inline-end: 1rem;
         }
 
         div {
@@ -58,7 +64,7 @@ export const CartContent = styled.div`
                 justify-self: end;
             }
         }
-    }   
+    }    
 `
 
 export const CartOrder = styled.div`
