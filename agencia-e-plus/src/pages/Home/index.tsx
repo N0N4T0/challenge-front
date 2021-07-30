@@ -1,4 +1,3 @@
-import Cart from "../../components/Cart"
 import { HeaderContainer, HeaderContent } from "./styles"
 
 const Home = ():JSX.Element => {
