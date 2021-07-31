@@ -3,13 +3,16 @@ import Cart from './components/Cart';
 
 import Routes from './routes';
 import GlobalStyles from './styles/global'
+import { CartProvider } from './hooks/useCart'
 
 const App = (): JSX.Element =>{
   return (
     <BrowserRouter>
-      <GlobalStyles/>
-      <Routes/>
-      <Cart/>
+      <CartProvider>
+        <GlobalStyles/>
+        <Routes/>
+        <Cart/>
+      </CartProvider>
     </BrowserRouter>
   )
 }
