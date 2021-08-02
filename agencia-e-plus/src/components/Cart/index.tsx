@@ -8,6 +8,7 @@ const Cart = (): JSX.Element => {
     const cartFormatted = cart.map(product => ({
         ...product,
         priceFormatted: formatPrice(product.bestPrice/100),
+        nameFormatted: product.name.substring(0, 34)
     }))
 
     const total = 
@@ -26,7 +27,7 @@ const Cart = (): JSX.Element => {
                         src={product.image}
                         alt={product.name} />
                     <div>
-                        <h4>{product.name}</h4>
+                        <h4>{product.nameFormatted}...</h4>
                         <div>
                             <p>Qtd: {product.quantity}</p>
                             <p>{product.priceFormatted}</p>
